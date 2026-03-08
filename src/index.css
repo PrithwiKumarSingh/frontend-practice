@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@theme {
+  --font-roboto: "Roboto", "sans-serif"; 
+} */
+
+@theme {
+  --font-family-display: 'Satoshi', 'sans-serif';
+}
