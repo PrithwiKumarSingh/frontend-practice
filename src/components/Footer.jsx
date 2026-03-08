@@ -7,7 +7,7 @@ const Footer = () => {
         <div className='flex gap-25 mt-4 justify-center text-xl'>
             <a href="/">Home</a>
             <a href="/projects">Projects</a>
-            <a href="/notfound">FAQ</a>
+            <a href="/faq">FAQ</a>
         </div>
     </div>
   )
