@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className='md:w-7xl  mx-auto h-full flex justify-between px-3 items-center'>
             <a className='text-2xl md:text-3xl font-bold' href="/"> Fronted Practice</a>
             <div className=' hidden md:block '>
-                <a className='mx-3 font-bold text-xl' href="/">Home</a>
+                <a className='mx-3 font-bold text-xl' href="/pri">Home</a>
                 <a className='mx-3 font-bold text-xl' href="/projects">Projects</a>
                 <a className='mx-3 font-bold text-xl' href="/notfound">FAQ</a>
             </div>
