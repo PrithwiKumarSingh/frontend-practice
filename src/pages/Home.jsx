@@ -77,7 +77,7 @@ const Home = () => {
 
     <Link to="/projects" >
     <div className='flex justify-center mb-12'>
-    <button onClick={()=>{ navigate("/projects")}} className='hover:bg-black hover:text-white transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl text-slate-700 border border-black  '>Get Started</button>
+    <button className='hover:bg-black hover:text-white transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl text-slate-700 border border-black  '>Get Started</button>
     </div>
     </Link>
 
