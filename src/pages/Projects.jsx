@@ -34,6 +34,16 @@ const Projects = () => {
                 {slug:"Stark" ,color : '#FFC700' ,label :"Level 2" ,image : "https://www.frontendpractice.com/card/C3-Stark.png" , name: "Stark"},
     ]
 
+    const retiredProjects = [
+  { color: '#BCFF93', label: 'Level 2', image: 'https://www.frontendpractice.com/card/C2-ecwid.png', slug: 'Ecwid' },
+  { color: '#BCFF93', label: 'Level 3', image: 'https://www.frontendpractice.com/card/C2-grasshopper.png', slug: 'Grasshopper' },
+  { color: '#BCFF93', label: 'Level 1', image: 'https://www.frontendpractice.com/card/C2-instrument.png', slug: 'Instrument' },
+  { color: '#BCFF93', label: 'Level 1', image: 'https://www.frontendpractice.com/card/C1-Red-Square.png', slug: 'Red Square' },
+  { color: '#BCFF93', label: 'Level 2', image: 'https://www.frontendpractice.com/card/C2-shopify-dev.png', slug: 'Shopify Dev' },
+  { color: '#BCFF93', label: 'Level 2', image: 'https://www.frontendpractice.com/card/C2-sketch.png', slug: 'Sketch' },
+  { color: '#BCFF93', label: 'Level 2', image: 'https://www.frontendpractice.com/card/C2-trello.png', slug: 'Trello' },
+];
+
     const filteredProjects =projects.filter((p)=>{
         const levelMatch = filter === "all" || p.label === filter;
         const nameMatch = p.name.toLowerCase().includes(search.toLowerCase())
@@ -97,15 +107,15 @@ const Projects = () => {
                     <h2 className='font-bold text-xl '>Projects with updates designs and no archived versions available. The projects and reference images are still viewable, should you wish to learn from them.</h2>
                 </div>
 
-            <div className='  w-400 h-auto my-14 mb-20 grid md:grid-cols-4 md:grid-flow-row gap-8 mx-auto place-items-center'>
-                <ProjectCard data={{color : '#BCFF93' ,label :"Level 2" ,image : "https://www.frontendpractice.com/card/C2-ecwid.png" , name: "Ecwid"}}/>
-                <ProjectCard data={{color : '#BCFF93' ,label :"Level 3" ,image : "https://www.frontendpractice.com/card/C2-grasshopper.png" , name: "Grasshopper"}}/>
-                <ProjectCard data={{color : '#BCFF93' ,label :"Level 1" ,image : "https://www.frontendpractice.com/card/C2-instrument.png" , name: "Instrument"}}/>
-                <ProjectCard data={{color : '#BCFF93' ,label :"Level 1" ,image : "https://www.frontendpractice.com/card/C1-Red-Square.png" , name: "Red Square"}}/>
-                <ProjectCard data={{color : '#BCFF93' ,label :"Level 2" ,image : "https://www.frontendpractice.com/card/C2-shopify-dev.png" , name: "shopify Dev"}}/>
-                <ProjectCard data={{color : '#BCFF93' ,label :"Level 2" ,image : "https://www.frontendpractice.com/card/C2-sketch.png" , name: "Sketch"}}/>
-                <ProjectCard data={{color : '#BCFF93' ,label :"Level 2" ,image : "https://www.frontendpractice.com/card/C2-trello.png" , name: "Trello"}}/>
-            </div>
+            <div className='w-400 h-auto my-14 mb-20 grid md:grid-cols-4 md:grid-flow-row gap-8 mx-auto place-items-center'>
+                {retiredProjects.map((project, index) => (
+                    <Link key={index} to={`/projects/${project.slug}`}>
+                    <ProjectCard data={project} />
+                    </Link>
+                ))}
+                </div>
+
+
             </div>
 
 
