@@ -2,8 +2,16 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+    const navigate = useNavigate();
+    const sectionRef = useRef(null);
+
+  const handleScroll = () => {
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
     <Navbar></Navbar>
@@ -14,8 +22,10 @@ const Home = () => {
                     <p className='text-xl font-sm my-6 max-w-2xl'>Take your frontend skills to the next level by recreating <span className=' font-bold'>real websites</span> from real companies.</p>
                     <p className='text-xl font-sm my-6 max-w-2xl' >The perfect type of practice for developers of all skill levels. Are you up for the challenge?</p>
                     <div className='flex gap-4 my-6'>
+                        <Link to="/projects">
                         <button className='hover:bg-black hover:text-white transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl text-slate-500 border border-black  '>View Projects</button>
-                        <button className='hover:bg-black hover:text-white transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl text-slate-500 border border-black  '>Learn More</button>
+                        </Link>
+                        <button onClick={handleScroll} className='hover:bg-black hover:text-white transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl text-slate-500 border border-black  '>Learn More</button>
                     </div>
                 </div>
                 <div className='hidden md:block mx-w-auto'>
@@ -23,7 +33,7 @@ const Home = () => {
             </div>
         </div>
     </div>
-    <div className=' w-full text-center my-12'>
+    <div  className=' w-full text-center my-12'>
         <h2 className='text-4xl font-bold '>Frontend Practice provides you with the <br /> inspiration and resources to create <br /> beautiful websites.</h2>
     </div>
     <div className=' w-full text-center my-12'>
@@ -71,7 +81,7 @@ const Home = () => {
 
     </div>
 
-    <div className='w-full text-center my-12'>
+    <div ref={sectionRef} className='w-full text-center my-12'>
         <h2 className='text-3xl font-extrabold  '>Ready to become a better <br /> frontend developer?</h2>
     </div>
 

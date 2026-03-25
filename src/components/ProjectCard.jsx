@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProjectCard = (props) => {
   return (
-    <a href="">
+    <div>
     <div className=' w-full relative transition-all duration-300 hover:-translate-y-4'>
     <div className=' w-fit border-2 h-auto '>
         <div className="border-2 absolute w-24 h-10 bg-[#BCFF93]  -right-2 -top-2 content-center" style={props.data.label === "Level 2"? {backgroundColor: "#FCFF74" }: props.data.label === "Level 3"? { backgroundColor:"#FFD430" } : { backgroundColor:"#BCFF93" } }>
@@ -16,7 +16,7 @@ const ProjectCard = (props) => {
         </div>
     </div>
     </div>
-    </a>
+    </div>
   )
 }
 
