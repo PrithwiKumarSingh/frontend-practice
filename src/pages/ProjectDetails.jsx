@@ -17,9 +17,9 @@ const ProjectDetails = () => {
 
   
   return (
-    <>
+    <div className='bg-[#0F172A]'>
     <Navbar/>
-    <div className='w-full mt-15 '>
+    <div className='w-full mt-15'>
       <div>{
 
         project.map((d,index) => < ProjectView key={index} info={d} ></ProjectView> )
@@ -31,7 +31,7 @@ const ProjectDetails = () => {
     </div>
 
     <Footer/>
-    </>
+    </div>
   )
 }
 

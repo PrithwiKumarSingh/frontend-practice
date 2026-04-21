@@ -53,11 +53,11 @@ const Projects = () => {
         })
     
   return (
-    <>
+    <div className='bg-[#0F172A] text-[#E5E7EB]'>
     <Navbar/>
-    <div className='w-full mt-40  text-center h-auto'>
+    <div className='w-full pt-20  text-center h-auto bg-[#0F172A] text-[#E5E7EB]'>
         <div className='w-full'>
-            <h1 className='text-7xl font-bold mt-15'>Project Library</h1>
+            <h1 className='text-7xl font-bold mt-15 text-amber-200'>Project Library</h1>
             <h2 className='text-2xl font-bold my-6 underline'>How to get started:</h2>
             <div className='mt-4  flex justify-center items-center gap-2'>
                 <FaArrowRightLong/>
@@ -77,10 +77,10 @@ const Projects = () => {
             </div>
 
             <div className='mt-8 mb-4'>
-                <button onClick={()=> setFilter("all")} className='hover:bg-black focus:bg-black focus:text-white hover:text-white transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl text-black border-2 border-black  ml-3'>View All</button>
-                <button onClick={()=> setFilter("Level 1")} className='hover:bg-[#BCFF93] clicked:bg-[#BCFF93]  transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl text-black border-2 mx-3 '>Level 1</button>
-                <button onClick={()=> setFilter("Level 2")} className='focus:bg-[#FCFF74] hover:bg-[#FCFF74]  transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl text-black border-2  '>Level 2</button>
-                <button onClick={()=> setFilter("Level 3")} className='focus:bg-[#FFC700] hover:bg-[#FFC700]  transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl text-black border-2  mx-3 '>Level 3</button>
+                <button onClick={()=> setFilter("all")} className='hover:bg-black focus:bg-black focus:text-white hover:text-white transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl text-white border-2 border-white  ml-3'>View All</button>
+                <button onClick={()=> setFilter("Level 1")} className='hover:bg-[#BCFF93] clicked:bg-[#BCFF93]  transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl hover:text-black border-2 mx-3 '>Level 1</button>
+                <button onClick={()=> setFilter("Level 2")} className='focus:bg-[#FCFF74] hover:bg-[#FCFF74]  transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl hover:text-black border-2  '>Level 2</button>
+                <button onClick={()=> setFilter("Level 3")} className='focus:bg-[#FFC700] hover:bg-[#FFC700]  transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl hover:text-black border-2  mx-3 '>Level 3</button>
             </div>
 
             <div className='w-180 mx-auto mb-12' >
@@ -125,7 +125,7 @@ const Projects = () => {
 
         <Footer/>
     </div>
-    </>
+    </div>
   )
 }
 

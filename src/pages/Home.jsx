@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import tech from "../assets/tech.png"
 
 const Home = () => {
     const navigate = useNavigate();
@@ -13,28 +14,28 @@ const Home = () => {
     sectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <>
+    <div className='bg-[#0F172A] text-[#E5E7EB]'>
     <Navbar></Navbar>
-    <div className='w-full mt-18 h-auto bg-[#FAEBD7] border-b-2'>
+    <div className='w-full mt-18 h-auto bg-[#0F172A] border border-[#3a3a3a]'>
         <div className='  flex gap-12  md:w-7xl mx-auto p-8  h-95 md:h-168'>
-                <div className='mx-auto max-w-xl md:p-8 '>
-                    <h1 className=' text-3xl md:text-5xl font-bold md:mt-20'>Become a better frontend developer.</h1>
-                    <p className='text-xl font-sm my-6 max-w-2xl'>Take your frontend skills to the next level by recreating <span className=' font-bold'>real websites</span> from real companies.</p>
+                <div className='mx-auto max-w-xl text-white md:p-8 '>
+                    <h1 className=' text-3xl md:text-5xl text-[#FACC15] font-bold md:mt-20'>Master Frontend by Cloning Real Websites</h1>
+                    <p className='text-xl  font-sm my-6 max-w-2xl'>Take your frontend skills to the next level by recreating <span className=' font-bold'>real websites</span> from real companies.</p>
                     <p className='text-xl font-sm my-6 max-w-2xl' >The perfect type of practice for developers of all skill levels. Are you up for the challenge?</p>
                     <div className='flex gap-4 my-6'>
                         <Link to="/projects">
-                        <button className='hover:bg-black hover:text-white transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl text-slate-500 border border-black  '>View Projects</button>
+                        <button className='bg-amber-300 text-[#1E1E1E] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg md:cursor-pointer py-3 px-6 font-bold text-xl  border border-[#3a3a3a]  '>Start Practicing</button>
                         </Link>
-                        <button onClick={handleScroll} className='hover:bg-black hover:text-white transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl text-slate-500 border border-black  '>Learn More</button>
+                        <button onClick={handleScroll} className='bg-amber-300 text-[#1E1E1E] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl border border-[#3a3a3a]  '>Browse Challenges</button>
                     </div>
                 </div>
-                <div className='hidden md:block mx-w-auto'>
-                    <img className='h-120 mt-16 object-cover ' src="https://www.frontendpractice.com/project-collage.png" />
+                <div className='hidden md:block mx-w-auto '>
+                    <img className='h-150  object-cover ' src={tech} />
             </div>
         </div>
     </div>
     <div  className=' w-full text-center my-12'>
-        <h2 className='text-4xl font-bold '>Frontend Practice provides you with the <br /> inspiration and resources to create <br /> beautiful websites.</h2>
+        <h2 className='text-4xl font-bold '>CloneCraft provides you with the <br /> inspiration and resources to create <br /> beautiful websites.</h2>
     </div>
     <div className=' w-full text-center my-12'>
         <h2 className='text-2xl font-semibold '>Here are some ways you can benefit <br /> from using our platform:</h2>
@@ -87,13 +88,13 @@ const Home = () => {
 
     <Link to="/projects" >
     <div className='flex justify-center mb-12'>
-    <button className='hover:bg-black hover:text-white transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl text-slate-700 border border-black  '>Get Started</button>
+    <button className='bg-[#FFBF00] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 md:cursor-pointer py-3 px-6 font-bold text-xl text-black border border-[#3a3a3a]  '>Get Started</button>
     </div>
     </Link>
 
     <Footer/>
 
-    </>
+    </div>
   )
 }
 

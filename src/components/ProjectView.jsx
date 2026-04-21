@@ -2,11 +2,11 @@ import React from 'react'
 
 const ProjectView = ({info}) => {
   return (
-          <div className='w-313 mx-auto bg-[#F9F9F9] border-x-2 border-t-2'>
+          <div className='w-313 mx-auto bg-[#0F172A] text-[#E5E7EB] border-x-2 border-t-2'>
 
          {/* heading */}
       <div className='text-center'>
-        <h1 className='text-8xl font-bold mt-10'>{info?.frontMatter?.title}</h1>
+        <h1 className='text-8xl font-bold mt-10 text-amber-300'>{info?.frontMatter?.title}</h1>
         <h2 className='text-3xl font-semibold'>{info?.frontMatter?.description}</h2>
         <div className='flex gap-5 justify-center my-4'>
           <a className='hover:text-blue-700 font-bold text-lg' target='_blank' href={info?.frontMatter?.live}>🌐View Live</a>
@@ -62,7 +62,7 @@ const ProjectView = ({info}) => {
 
       {/* movitivaton  */}
 
-      <div className='px-35 py-15 bg-white grid grid-cols-3 gap-45 border-t-2 border-b-2'>
+      <div className='px-35 py-15 bg-[#0F172A] grid grid-cols-3 gap-45 border-t-2 border-b-2'>
         <div className='w-90 py-6 px-4 bg-black text-white'>
           <h2 className='text-3xl font-extrabold'>Up for a challenge?</h2>
           <p className='text-lg font-extralight'>{info?.frontMatter?.challenge1}</p>
@@ -80,7 +80,7 @@ const ProjectView = ({info}) => {
 
 
       {/* image */}
-      <div className='p-10 text-center bg-white'>
+      <div className='p-10 text-center bg-[#0F172A]'>
         <h2 className='text-5xl font-extrabold mb-12'>Reference image</h2>
         <div className='rounded-xl overflow-hidden drop-shadow-2xl '>
           <img src={`https://www.frontendpractice.com/${info?.frontMatter?.previewImage}`} alt="" />
